@@ -1,0 +1,27 @@
+{
+  "name": "lazy",
+  "version": "1.0.0",
+  "description": "A commandline untility that does everything I don't want to, lazy enables me to be lazy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llexical/lazy.git"
+  },
+  "author": "Lizzie Davison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/llexical/lazy/issues"
+  },
+  "homepage": "https://github.com/llexical/lazy#readme",
+  "bin": {
+    "lazy": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "promptly": "^2.2.0",
+    "shelljs": "^0.7.7"
+  }
+}
