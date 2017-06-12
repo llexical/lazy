@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const shell = require('shelljs');
 const promptly = require('promptly');
 
 const settings = require('./libs/settings');
@@ -29,14 +28,16 @@ const errorMsg = `
 Oops, saving for some reason failed, please check that this script has the correct permissions to create a settings file in your home directory.
 `
 
-// Lazy says hi
+/**
+ * Lazy Process
+ * - lazy says hi
+ * - adds settings and saves
+ */
 console.log(welcomeMsg);
 
-// Adds settings & save
-promptly.prompt('workFolder: ')
-    .then((input) => {
-        return settings.saveSetting('workFolder', input);
-    })
+promptly
+    .prompt('workFolder: ')
+    .then((input) => settings.set('workFolder', input))
     .then(settings.saveSettings)
     .then(() => console.log(doneMsg))
     .catch((e) => console.log(errorMsg, e));
