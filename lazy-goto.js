@@ -4,7 +4,7 @@ const program = require('commander');
 const shell = require('shelljs');
 
 const settings = require('./libs/settings');
-const {checkSettings} = require('./libs/helpers');
+const {getSettings} = require('./libs/helpers/settings');
 const params = {};
 
 program
@@ -16,8 +16,7 @@ program
     });
 
 // Does not work lollll
-checkSettings(settings)
-    .then(settings.getSettings)
+getSettings()    
     .then(() => {
         const workFolder = settings.get('workFolder');
         
@@ -32,4 +31,5 @@ checkSettings(settings)
         console.log('cwd', process.cwd());
         shell.exec('goto "/Users/lizzie/Work"');
     })
+    .catch(e => console.log(e));
     

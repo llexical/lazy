@@ -27,7 +27,7 @@ getSettings()
         const folder = findFolder(params.folderName, settings.get('workFolder'));
 
         if (folder)
-            shell.exec(`code ${folder}`);
+            shell.exec(`open ${folder}`);
     })
     .catch(e => console.log(e));
     
