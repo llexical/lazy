@@ -1,5 +1,5 @@
 {
-  "name": "lazy",
+  "name": "lzy",
   "version": "1.0.0",
   "description": "A commandline untility that does everything I don't want to, lazy enables me to be lazy",
   "main": "index.js",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/llexical/lazy#readme",
   "bin": {
-    "lazy": "./index.js"
+    "lzy": "./index.js"
   },
   "dependencies": {
     "commander": "^2.9.0",

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * lazy code [foldername]
- * Will find the directory you are talking about and then open vs code for you
+ * lazy open [foldername]
+ * Will find the directory you are talking and open it in finder
  */
 
 const program = require('commander');
